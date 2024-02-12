@@ -1,0 +1,10 @@
+<div class="ticket-result">
+  <form [formGroup]="ticketForm">
+    <div>
+      <label for="ticketId">Ticket ID:</label>
+      <input type="text" id="ticketId" formControlName="ticketId" placeholder="Ticket ID">
+    </div>
+    <button type="button" (click)="updateStatus('CASTIGAT')" >CASTIGAT</button>
+    <button type="button" (click)="updateStatus('PIERDUT')" >PIERDUT</button>
+  </form>
+</div>

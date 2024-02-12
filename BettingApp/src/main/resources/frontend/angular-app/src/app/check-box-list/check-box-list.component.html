@@ -1,0 +1,26 @@
+<div class="checkbox-list">
+  <div class="input">
+    <input type="checkbox" [(ngModel)]="checkboxService.showOlderMatches">
+    <label>Show Older Matches</label>
+  </div>
+
+  <div class="input">
+    <input type="radio" name="sortOption" [(ngModel)]="checkboxService.sortOption" value="date_d">
+    <label>Sort by Date Desc</label>
+  </div>
+
+  <div class="input">
+    <input type="radio" name="sortOption" [(ngModel)]="checkboxService.sortOption" value="date_a">
+    <label>Sort by Date Asc</label>
+  </div>
+
+  <div class="input">
+    <input type="radio" name="sortOption" [(ngModel)]="checkboxService.sortOption" value="homeTeam">
+    <label>Sort by Home Team</label>
+  </div>
+
+  <div class="input">
+    <input type="radio" name="sortOption" [(ngModel)]="checkboxService.sortOption" value="awayTeam">
+    <label>Sort by Away Team</label>
+  </div>
+</div>

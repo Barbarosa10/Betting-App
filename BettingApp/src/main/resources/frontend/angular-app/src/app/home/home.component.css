@@ -1,0 +1,130 @@
+.auth-form{
+  /*margin-top: auto;*/
+  display: flex;
+  justify-content: center;
+}
+.chat-fab {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  z-index: 1000;
+}
+.bilet-fab {
+  position: fixed;
+  bottom: 45px;
+  left: 45px;
+  z-index: 1000;
+}
+mat-toolbar {
+  background: #2B46BF;
+}
+
+.toolbar-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 36px;
+  color: white;
+}
+
+.toolbar-spacer {
+  flex: 5px;
+}
+.unique-navbar-button {
+  color: #AF1B43;
+  font-size: 25px;
+}
+.unique-navbar-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.unique-intra-button {
+  background-color: #AF1B43 !important;
+  color: white !important;
+  font-family: 'Kanit', sans-serif;
+  margin-right: 4px;
+}
+button.mat-raised-button.unique-intra-button:hover {
+  background-color: #9a1637;
+}
+
+button.mat-raised-button.unique-intra-button:active {
+  background-color: #8f152f;
+}
+
+button.mat-raised-button.unique-intra-button:focus {
+  background-color: #8f152f;
+}
+
+.bonus-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.bonus-title {
+  font-size: 50px;
+  color: #007bff;
+}
+
+.bonus-description {
+  font-size: 16px;
+  color: #333;
+}
+
+.steps-section {
+  /* Stiluri pentru secțiunea cu pași */
+  /* ... */
+}
+
+.steps-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Ajustează marginea pentru a face pașii mai mari */
+}
+
+.step-number {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 50px; /* Ajustează dimensiunea pentru a face numărul mai mare */
+  width: 80px; /* Ajustează dimensiunea pentru a face numărul mai mare */
+  height: 80px; /* Ajustează dimensiunea pentru a face numărul mai mare */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #333;
+}
+
+.banner-container {
+  width: 100%;
+  height: 400px; /* Setează înălțimea dorită pentru banner */
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

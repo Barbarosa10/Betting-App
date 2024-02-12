@@ -1,0 +1,88 @@
+.chat-window {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+
+.chat-body {
+  flex: 1;
+  overflow-y: auto;
+}
+li {
+  list-style-type: none; /* Removes bullet points */
+  margin-bottom: 20px; /* More space between list items */
+}
+#messageArea {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Styles for the sender's name */
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 5px; /* Little space between sender and message body */
+}
+
+/* Styles for the message body */
+.message-body {
+  background-color: #f0f0f0; /* Background color for the message body */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding inside the message body */
+  word-wrap: break-word; /* Ensure long words do not overflow */
+
+}
+
+.chat-footer {
+  height: 45px;
+  background-color: #f8f8f8;
+  display: flex;
+}
+
+.chat-send-btn {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  flex: 0 0 auto;
+  color: #007bff;
+}
+
+.chat-input {
+  flex: 1;
+  border: 1px solid #ccc;    /* Subtle border */
+  border-radius: 4px;        /* Rounded corners */
+  box-sizing: border-box;    /* Include padding and border in the element's width */
+  font-size: 16px;           /* Slightly larger font size for readability */
+  padding: 10px;
+}
+
+.chat-input:focus {
+  border-color: #007bff;     /* Change border color when focused */
+  outline: none;             /* Remove the default focus outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a shadow on focus */
+}

@@ -1,0 +1,5 @@
+<div class="auth-form">
+  <app-login *ngIf="showLogin()" (showRegister)="showRegisterForm()" (showChangePassword)="showChangePasswordForm()"></app-login>
+  <app-register *ngIf="showRegister()" (showLogin)="showLoginForm()" (showChangePassword)="showChangePasswordForm()"></app-register>
+  <app-change-password *ngIf="showChangePassword()" (showLogin)="showLoginForm()" (showRegister)="showRegisterForm()"></app-change-password>
+</div>

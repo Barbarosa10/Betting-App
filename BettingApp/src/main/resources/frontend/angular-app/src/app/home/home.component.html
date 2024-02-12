@@ -1,0 +1,42 @@
+<div class="content">
+  <div class="banner-container">
+    <img src="../assets/banner.png" alt="Banner" class="banner-image">
+  </div>
+
+  <div class="bonus-section">
+    <h2 class="bonus-title">Bonus 100 RON la Prima Depunere</h2>
+    <p class="bonus-description">Înregistrează-te astăzi și primești un bonus de 100 RON la prima ta depunere!</p>
+    <p class="bonus-description">*Ofertă dedicată exclusiv jucătorilor noi</p>
+  </div>
+
+  <div class="steps-section">
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p class="step-description">Fă-ți cont pe BETUIASI</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <p class="step-description">Depune bani în contul tău</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <p class="step-description">Primește bonusul de 100 RON!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <button class="chat-fab" color="primary" mat-mini-fab (click)="openChatWindow()">
+    <mat-icon>chat</mat-icon>
+  </button>
+  <app-chat-window *ngIf="isChatVisible"></app-chat-window>
+</div>
+<div>
+  <button class="bilet-fab" color="primary" mat-mini-fab (click)="openBiletWindow()">
+    <mat-icon>local_play</mat-icon>
+  </button>
+  <app-bilet *ngIf="isBiletVisible"></app-bilet>
+</div>

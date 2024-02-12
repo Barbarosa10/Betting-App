@@ -1,0 +1,47 @@
+<div>
+  <app-check-box-list></app-check-box-list>
+</div>
+<div>
+  <app-sidenav-sport></app-sidenav-sport>
+</div>
+<div class="container">
+  <div class="search-bar">
+    <input type="text" placeholder="Search matches..." [(ngModel)]="searchTerm" (input)="filterMatches()">
+  </div>
+  {{ getSortedMatches() }}
+  <div class="matches-list" *ngFor="let match of filteredMatches">
+    <div class="text">
+        <div class="title">{{ match.area.name }} - {{ match.competition.name }}</div>
+        <div class="subtitle">{{ formatDate(match.utcDate) }}</div>
+        <p>{{ match.homeTeam.name }} - {{ match.awayTeam.name }}</p>
+    </div>
+    <div class="button-container">
+      <button *ngIf="isAfterNow(match.utcDate)" class="button" (click)="addSelectedMatch(match, '1')">
+        <span class="button-text">1</span>
+        <span class="odds">{{ match.odds_generated.odds?.['1'] | number:'1.2-2' }}</span>
+      </button>
+      <button *ngIf="isAfterNow(match.utcDate)" class="button" (click)="addSelectedMatch(match, 'X')">
+        <span class="button-text">X</span>
+        <span class="odds">{{ match.odds_generated.odds?.['X'] | number:'1.2-2' }}</span>
+      </button>
+      <button *ngIf="isAfterNow(match.utcDate)" class="button" (click)="addSelectedMatch(match, '2')">
+        <span class="button-text">2</span>
+        <span class="odds">{{ match.odds_generated.odds?.['2'] | number:'1.2-2' }}</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <button class="chat-fab" color="primary" mat-mini-fab (click)="openChatWindow()">
+    <mat-icon>chat</mat-icon>
+  </button>
+  <app-chat-window *ngIf="isChatVisible"></app-chat-window>
+</div>
+<div>
+  <button class="bilet-fab" color="primary" mat-mini-fab (click)="openBiletWindow()">
+    <mat-icon>local_play</mat-icon>
+  </button>
+  <app-bilet *ngIf="isBiletVisible"></app-bilet>
+</div>
+
+

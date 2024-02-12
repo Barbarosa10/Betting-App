@@ -1,0 +1,28 @@
+.checkbox-list {
+  position: fixed;
+  width: 200px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  right: 10px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.checkbox-list .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-list input {
+  margin-right: 5px;
+
+}
+.sidebar ul li.selected {
+  color: blue;
+  /* Add any additional styling for the selected state */
+}

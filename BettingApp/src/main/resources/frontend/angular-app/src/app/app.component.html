@@ -1,0 +1,30 @@
+
+<main class="main" >
+  <mat-toolbar color="primary">
+    <button mat-button class="toolbar-title" (click)="navigate('/')">BETUIASI</button>
+    <span class="toolbar-spacer"></span>
+
+    <button mat-button class="unique-navbar-button" (click)="navigate('/sports')">SPORT</button>
+    <button mat-button class="unique-navbar-button" (click)="navigate('/live')">LIVE</button>
+    <button mat-button class="unique-navbar-button"(click)="navigate('/news')">
+      <mat-icon>notifications</mat-icon> STIRI
+    </button>
+    <span class="toolbar-spacer"></span>
+    <div *ngIf="authService.isAuthenticated$ | async; else showButtons" >
+        Funds: {{fundsService.funds$}}
+      <button mat-raised-button class="unique-intra-button" (click)="navigate('/buy-coins')">Adaugă bani</button>
+      <button mat-raised-button class="unique-intra-button" (click)="logout()">Logout</button>
+    </div>
+    <ng-template #showButtons>
+      <button mat-raised-button class="unique-intra-button" (click)="navigateToLogin()">Intră în cont</button>      <button mat-raised-button class="unique-intra-button"(click)="navigateToRegister()">Înregistrează-te</button>
+    </ng-template>
+
+  </mat-toolbar>
+<!--  <div>-->
+<!--    <app-bilet></app-bilet>-->
+<!--  </div>-->
+
+</main>
+
+
+<router-outlet></router-outlet>

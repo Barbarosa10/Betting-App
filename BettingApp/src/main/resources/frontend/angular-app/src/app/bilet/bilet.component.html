@@ -1,0 +1,37 @@
+<div class="chat-window">
+  <div class="chat-header">
+    Bilet
+    <button class="close-btn" (click)="closeChatWindow()">
+      <mat-icon [style.color]="'white'">close</mat-icon>
+    </button>
+  </div>
+    <mat-card>
+      <mat-card-content>
+        <div class="row-container">
+          <div class="event-title">
+            Evenimente:
+          </div>
+          <button mat-icon-button (click)="clearList()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        <div *ngFor="let match of selectedMatchList">{{ match?.homeTeam }} - {{ match?.awayTeam }}: <div style="float: right" >{{ match?.selectedOption }}</div></div>
+
+      </mat-card-content>
+
+      <mat-card-actions >
+
+        <div class="bet-amount">
+          <p>Miză:</p>
+          <mat-form-field>
+            <input matInput [(ngModel)]="miza">
+          </mat-form-field>
+        </div>
+        <div class="potential-win">
+          <p>Câștig potențial:</p>
+          <p>{{ totalAmount | number:'1.2-2' }}</p>
+        </div>
+        <button mat-raised-button color="primary" (click)="postTicket()">PREGĂTIRE BILET</button>
+      </mat-card-actions>
+    </mat-card>
+</div>

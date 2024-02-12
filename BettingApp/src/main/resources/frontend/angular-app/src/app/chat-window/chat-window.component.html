@@ -1,0 +1,22 @@
+<div class="chat-window">
+  <div class="chat-header">
+    Chat
+    <button class="close-btn" (click)="closeChatWindow()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="chat-body" #messageArea>
+    <ul id ="messageArea" >
+      <li *ngFor="let message of messageList">
+        <p class="message-sender">{{ message.username }}:</p>
+        <p class="message-body">{{ message.messageBody }}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="chat-footer">
+    <input class="chat-input" type="text"  (keyup.enter)="sendMessage()" placeholder="Type a message..." [formControl]="messageControl">
+    <button class="chat-send-btn" (click)="sendMessage()" mat-flat-button>
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
+</div>

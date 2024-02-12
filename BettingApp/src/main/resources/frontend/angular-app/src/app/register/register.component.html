@@ -1,0 +1,29 @@
+<div class="register-container">
+  <h2>BETUIASI</h2>
+  <form (ngSubmit)="onRegister()">
+    <div class="form-group">
+      <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="username"  required>
+    </div>
+    <div class="form-group">
+      <input type="CNP" id="CNP" name="CNP" [(ngModel)]="CNP" placeholder="CNP"  required>
+    </div>
+    <a *ngIf="isAgeVerificationFailed; else elseBlock" class="a.errormessage"> Nu ai 18 ani!</a>
+    <ng-template #elseBlock></ng-template>
+    <div class="form-group">
+      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="password"  required>
+    </div>
+    <div class="form-group">
+      <input type="password" id="confirmpassword" name="confirmpassword" [(ngModel)]="confirmpassword" placeholder="confirm password"  required>
+    </div>
+    <a *ngIf="isErrorMessageVisible; else elseBlock" class="a.errormessage"> Parolele nu coincid!</a>
+    <ng-template #elseBlock></ng-template>
+    <button class="button" type="submit">Register</button>
+    <a *ngIf="isRegisterOK; else elseBlock" class="a.okmessage"> Inregistrare reusita! Apasa pe "Login" pentru a intra in cont :)</a>
+  </form>
+
+  <div class="links">
+    <a (click)="showChangePassword.emit()">Forgot Password</a>
+    <span class="separator">|</span>
+    <a (click)="showLogin.emit()">Login</a>
+  </div>
+</div>

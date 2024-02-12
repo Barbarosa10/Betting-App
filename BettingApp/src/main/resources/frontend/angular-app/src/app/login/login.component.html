@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2>BETUIASI</h2>
+  <form (ngSubmit)="onLogin()">
+    <div class="form-group">
+      <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="username"  required>
+    </div>
+
+    <div class="form-group">
+      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="password"  required>
+    </div>
+    <a *ngIf="isErrorMessageVisible; else elseBlock" class="a.errormessage"> Username sau parola invalide!</a>
+    <ng-template #elseBlock></ng-template>
+    <button class="button" type="submit">Login</button>
+  </form>
+
+  <div class="links">
+    <a (click)="showChangePassword.emit()">Forgot Password</a>
+    <span class="separator">|</span>
+    <a (click)="showRegister.emit()">Register</a>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="news-grid">
+  <div *ngIf="expandedNewsIndex !== null" class="overlay" (click)="closeExpandedNews()"></div>
+
+  <div class="news-card" *ngFor="let new of news; let i = index" [ngStyle]="getCardStyle(i)">
+    <div class="news-image-container">
+      <img class="news-image" [src]="localImages[i % localImages.length]" alt="News headline image">
+    </div>
+    <div class="news-text-container">
+      <p *ngIf="expandedNewsIndex === i">{{ new.a }}</p>
+      <p *ngIf="expandedNewsIndex !== i">{{ sliceAfterTime(new.a) }}</p>
+      <button (click)="toggleFullText(i)" class="read-more-btn">
+        {{ expandedNewsIndex === i ? 'Read Less' : 'Read More' }}
+      </button>
+    </div>
+  </div>
+</div>

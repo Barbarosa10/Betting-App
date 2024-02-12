@@ -1,0 +1,8 @@
+<div class="sidebar">
+  <div class="title">SPORT</div>
+  <ul>
+    <li *ngFor="let sport of sports" (click)="selectSport(sport)" [class.selected]="sport === selectedSport">
+      {{ sport }}<div class="text">{{nrOfMatches[sports.indexOf(sport)]}}</div>
+    </li>
+  </ul>
+</div>
